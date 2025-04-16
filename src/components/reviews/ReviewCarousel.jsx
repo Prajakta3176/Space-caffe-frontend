@@ -15,23 +15,23 @@ const reviews = [
       'Space Café is a perfect chill spot with cosmic vibes, delicious burgers, and dreamy drinks. Great ambience, good music, and Insta-worthy setup make it a must-visit for food and vibe lovers!',
   },
   {
-    name: 'Rushah Nandanwar',
+    name: 'Prajakta Mondhe',
+     // Replace with actual path
+    rating: 3,
+    review:
+      'Space Café is a perfect chill spot with cosmic vibes, delicious burgers, and dreamy drinks. Great ambience, good music, and Insta-worthy setup make it a must-visit for food and vibe lovers!',
+  },
+  {
+    name: 'Nita Nandanwar',
      // Replace with actual path
     rating: 4,
     review:
       'Space Café is a perfect chill spot with cosmic vibes, delicious burgers, and dreamy drinks. Great ambience, good music, and Insta-worthy setup make it a must-visit for food and vibe lovers!',
   },
   {
-    name: 'Rushah Nandanwar',
+    name: 'Penguin kumar',
      // Replace with actual path
-    rating: 4,
-    review:
-      'Space Café is a perfect chill spot with cosmic vibes, delicious burgers, and dreamy drinks. Great ambience, good music, and Insta-worthy setup make it a must-visit for food and vibe lovers!',
-  },
-  {
-    name: 'Rushah Nandanwar',
-     // Replace with actual path
-    rating: 4,
+    rating: 5,
     review:
       'Space Café is a perfect chill spot with cosmic vibes, delicious burgers, and dreamy drinks. Great ambience, good music, and Insta-worthy setup make it a must-visit for food and vibe lovers!',
   },
