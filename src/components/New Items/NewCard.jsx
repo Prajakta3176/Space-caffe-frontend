@@ -9,7 +9,7 @@ export default function NewCard({ newData, direction , textAlign, imgPosition })
         <h2 className='newHead text-amber-500 text-3xl'>Newly Added</h2>
         <h1 className='text-4xl text-white font-semibold'>{newData.heading}</h1>
         <p className='text-white font-light'>{newData.desc}</p>
-        <div className={`${textAlign}`}>
+        <div className={`${imgPosition} flex`}>
           <p className='text-white bg-blue-950 py-2 px-5 w-max rounded-3xl font-light'>₹ {newData.price}/-</p>
         </div>
       </div>

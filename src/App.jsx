@@ -5,12 +5,13 @@ import SignUp from './pages/SignUp'
 import { BrowserRouter as Router , Routes, Route } from 'react-router';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer/Footer';
 
 
 export default function App() {
   return (
     <>
-        <div className='mainBody h-[100vh] pb-10 bg-black overflow-x-hidden'>
+        <div className='mainBody h-[100vh] bg-black overflow-x-hidden'>
             <Navbar/>
 
             <div className='mt-10'>
@@ -22,7 +23,7 @@ export default function App() {
             </Routes>
 
             </div>
-
+          <Footer/>
             {/* footer */}
         </div>
     </>
