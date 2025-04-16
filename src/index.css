@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+.mainBody{
+    background-image: url('./assets/bg-image.png');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+.newHead{
+    font-family: "Ruthie";
+}
+
+.reviewHead{
+    font-family:  "Ruluko";
+}
