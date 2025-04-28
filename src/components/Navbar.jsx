@@ -52,7 +52,7 @@ export default function Navbar() {
             <a href='/' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Home</a>
             <a href='/main-menu' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Menu</a>
             {/* <a href='#footer' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Contact</a> */}
-            {/* <a href='#testimonials' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Testimonials</a> */}
+            <a href='/about-us' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>About us</a>
         </nav>
 
         <nav className={`${isMobile ? "hidden" : "flex"}  items-center gap-10`}>
@@ -100,7 +100,7 @@ export default function Navbar() {
           <a href='/' onClick={handleMenu} className='hover:text-amber-500'>Home</a>
           <a href='/main-menu' onClick={handleMenu} className='hover:text-amber-500'>Menu</a>
           {/* <a href='#footer' onClick={handleMenu} className='hover:text-amber-500'>Contact</a> */}
-          {/* <a href='#testimonials' onClick={handleMenu} className='hover:text-amber-500'>Testimonials</a> */}
+          <a href='/about-us' onClick={handleMenu} className='hover:text-amber-500'>About us</a>
 
           <NavLink to='/cart' onClick={handleMenu} className={`hover:text-amber-500 ${isLoggedIn ? "block" : "hidden"}`}>
             <FaCartFlatbedSuitcase size={28} />
