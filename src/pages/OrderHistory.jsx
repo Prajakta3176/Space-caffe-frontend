@@ -11,7 +11,7 @@ export default function OrderHistory() {
   }
 
   const fetch = async () => {
-    const res = await axios.get(`http://localhost:8080/api/order/get-order-history`, { headers });
+    const res = await axios.get(`https://space-caffe-backend.vercel.app/api/order/get-order-history`, { headers });
     setOrders(res.data);
     console.log(res.data);
   }

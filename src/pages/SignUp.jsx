@@ -34,7 +34,7 @@ export default function SignUp() {
         }
 
         const fetch = async()=>{
-            const res = await axios.post('http://localhost:8080/api/user/signup',userData);
+            const res = await axios.post('https://space-caffe-backend.vercel.app/api/user/signup',userData);
             console.log(res.data.message);
             alert(res.data.message);
             navigate('/signin')

@@ -12,7 +12,7 @@ export default function ViewFoodDetails() {
   useEffect(() => {
     const fetchFood = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/food/get-food-item-by-id/${foodid}`);
+        const res = await axios.get(`https://space-caffe-backend.vercel.app/api/food/get-food-item-by-id/${foodid}`);
         setFoodData(res.data.foodItem);
         setLoading(false);
       } catch (err) {
@@ -39,7 +39,7 @@ export default function ViewFoodDetails() {
 
   const handleCart = async()=>{
     try{
-      const res = await axios.patch(`http://localhost:8080/api/food/add-food-in-cart`,{},{headers});
+      const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/food/add-food-in-cart`,{},{headers});
       console.log(res.data);
       alert(res.data.message)
     }catch(err){

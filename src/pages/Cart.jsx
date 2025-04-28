@@ -18,7 +18,7 @@ export default function Cart() {
 
 
       const fetch = async()=>{
-        const res = await axios.get(`http://localhost:8080/api/cart/get-all-cart-items/`,{headers});
+        const res = await axios.get(`https://space-caffe-backend.vercel.app/api/cart/get-all-cart-items/`,{headers});
         setFoodData(res.data);
     }
 
@@ -36,7 +36,7 @@ export default function Cart() {
             }
 
         try{
-            const res = await axios.patch(`http://localhost:8080/api/cart/add-food-in-cart/`,{},{headers});
+            const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/cart/add-food-in-cart/`,{},{headers});
             console.log(res.data);
             fetch();
           }catch(err){
@@ -51,7 +51,7 @@ export default function Cart() {
             }
 
         try{
-            const res = await axios.patch(`http://localhost:8080/api/cart/decrease-quantity-of-item`,{},{headers});
+            const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/cart/decrease-quantity-of-item`,{},{headers});
             console.log(res.data);
             fetch();
           }catch(err){
@@ -67,7 +67,7 @@ export default function Cart() {
             }
 
         try{
-            const res = await axios.patch(`http://localhost:8080/api/cart/remove-food-from-cart`,{},{headers});
+            const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/cart/remove-food-from-cart`,{},{headers});
             console.log(res.data);
             fetch();
           }catch(err){
@@ -78,7 +78,7 @@ export default function Cart() {
 
     const handlePlaceOrder = async()=>{
         try{
-            const res = await axios.patch(`http://localhost:8080/api/order/place-order`,{},{headers});
+            const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/order/place-order`,{},{headers});
             console.log(res.data);
             fetch();
 

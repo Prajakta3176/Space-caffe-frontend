@@ -15,7 +15,7 @@ export default function Profile() {
       }
 
     const fetch = async () => {
-        const res = await axios.get(`http://localhost:8080/api/user/get-user-information`, { headers });
+        const res = await axios.get(`https://space-caffe-backend.vercel.app/api/user/get-user-information`, { headers });
         console.log(res.data);
         setUser(res.data);
         setAddress({
@@ -30,7 +30,7 @@ export default function Profile() {
     
 
       const updateAddress = async()=>{
-        const res = await axios.patch(`http://localhost:8080/api/user/update-address`,address, { headers });
+        const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/user/update-address`,address, { headers });
         console.log(res.data);
         fetch();
       }
