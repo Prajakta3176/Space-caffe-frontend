@@ -7,6 +7,7 @@ import { authActions } from '../store/auth';
 import { TiThMenu } from "react-icons/ti";
 import history from '../assets/order-history.png'
 import { FaHourglassHalf } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
 
 export default function Navbar() {
   const activeLinkStyle = 'text-amber-500 border-b-2 border-amber-500 pb-1';
@@ -14,7 +15,6 @@ export default function Navbar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <=  767);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch = useDispatch();
-  // console.log(isLoggedIn);
 
   useEffect(()=>{
     const handleResize=()=>{
@@ -25,7 +25,7 @@ export default function Navbar() {
      return () => {
        window.removeEventListener("resize", handleResize);
      };
-   },[isMobile])
+   },[])
  
    const handleMenu = ()=>{
      if(isMenuOpen){
@@ -36,7 +36,7 @@ export default function Navbar() {
    }
 
   const handleSignOut = ()=>{
-    alert("Yo have been signed out")
+    alert("You have been signed out")
     dispatch(authActions.logout())
     localStorage.removeItem('id');
     localStorage.removeItem('token');
@@ -52,7 +52,7 @@ export default function Navbar() {
             <a href='/' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Home</a>
             <a href='/main-menu' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Menu</a>
             {/* <a href='#footer' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Contact</a> */}
-            <a href='#testimonials' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Testimonials</a>
+            {/* <a href='#testimonials' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Testimonials</a> */}
         </nav>
 
         <nav className={`${isMobile ? "hidden" : "flex"}  items-center gap-10`}>
@@ -81,17 +81,26 @@ export default function Navbar() {
 
         <button onClick={handleMenu} className={`${isMobile ? "block"  : 'hidden'}  text-2xl hover:text-zinc-300 transition-all duration-300`}>
             <TiThMenu />
-            </button>
+        </button>
     </div>
 
      {/* Mobile Menu Overlay */}
      {
       isMobile && (
         <div className={`${isMenuOpen ? 'flex' : 'hidden'} fixed top-0 left-0 w-full h-screen bg-blue-80 backdrop-blur-xl text-white z-50 flex-col items-center justify-center text-2xl gap-8`}>
+
+          {/* Cross Button added here */}
+          <button 
+            onClick={handleMenu} 
+            className="absolute top-6 right-6 text-3xl text-white transition-all duration-300"
+          >
+            <IoClose />
+          </button>
+
           <a href='/' onClick={handleMenu} className='hover:text-amber-500'>Home</a>
           <a href='/main-menu' onClick={handleMenu} className='hover:text-amber-500'>Menu</a>
           {/* <a href='#footer' onClick={handleMenu} className='hover:text-amber-500'>Contact</a> */}
-          <a href='#testimonials' onClick={handleMenu} className='hover:text-amber-500'>Testimonials</a>
+          {/* <a href='#testimonials' onClick={handleMenu} className='hover:text-amber-500'>Testimonials</a> */}
 
           <NavLink to='/cart' onClick={handleMenu} className={`hover:text-amber-500 ${isLoggedIn ? "block" : "hidden"}`}>
             <FaCartFlatbedSuitcase size={28} />
