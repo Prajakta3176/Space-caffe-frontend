@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { authActions } from '../store/auth';
+
 
 export default function SignIn() {
     const [userData, setUserData] = useState({
@@ -8,6 +11,10 @@ export default function SignIn() {
         number : "",
         password : ""
     })
+
+    const isLoggedIn = useSelector((state => state.auth.isLoggedIn));
+    const dispatch = useDispatch();
+    console.log(isLoggedIn);
 
     const [loginWithNumber, setLoginWithNumber] = useState(false);
     const navigate = useNavigate()
@@ -26,11 +33,14 @@ export default function SignIn() {
         const fetch = async()=>{
             try{
             const res = await axios.post('http://localhost:8080/signin',userData);
-            alert(res.data);
+            navigate('/');
             console.log(res.data);
+            dispatch(authActions.login());
             localStorage.setItem("id" , res?.data?.id);
             localStorage.setItem("token" , res?.data?.token);
-            navigate('/')
+            alert("Signed In successfully");
+
+
             }catch(err){
                 console.log(err.response.data);
                 alert(err.response.data.message)
@@ -54,21 +64,22 @@ export default function SignIn() {
 
   return (
     <div className=' h-screen w-full flex items-center justify-center'>
-        <div className='w-[80%] h-auto p-8 bg-white rounded'>
+        <div className='w-[80%] h-auto p-8 rounded'>
                    <div className='w-full md:w-4/6 lg:w-3/6 flex flex-col gap-3'>
-                    <h1 className='font-bold text-blue-400 text-3xl lg:text-4xl'>Sign in</h1>
-                    <form action="" className='flex flex-col gap-6 w-full'>                       
+                    <h1 className='font-sm text-white text-xl lg:text-2xl  tracking-widest text-center '>Hey,Enter your details to get sign in
+                    into your account  </h1>
+                    <form action="" className='flex flex-col gap-6 w-full items-center'>                       
 
                         {
                             loginWithNumber ? 
                             (<div className='flex flex-col w-full'>
-                                {/* <label htmlFor="number">Number</label> */}
-                                <input onChange={handleChange} className='bg-blue-200 p-4 rounded' id='number' name='number' type="number" placeholder='Number' value={userData.number}  />
+                                <label className='text-white' htmlFor="number">Number</label>
+                                <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='number' name='number' type="number"  value={userData.number}  />
                                 </div>
                             ) : (
                                 <div className='flex flex-col w-full'>
-                                {/* <label htmlFor="email">Email</label> */}
-                                <input onChange={handleChange} className='bg-blue-200 p-4 rounded' id='email' name='email' type="email" placeholder='Email' value={userData.email}  />
+                                <label className='text-white' htmlFor="email">Email</label>
+                                <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='email' name='email' type="email"  value={userData.email}  />
                                 </div>
                             )
 
@@ -76,17 +87,17 @@ export default function SignIn() {
                                                
                         
                         <div className='flex flex-col w-full'>
-                            {/* <label htmlFor="password">Password</label> */}
-                            <input onChange={handleChange} className={`bg-blue-200 p-4 rounded`} id='password' name='password' type="password" placeholder='Password' value={userData.password}  />
+                            <label className='text-white' htmlFor="password">Password</label>
+                            <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='password' name='password' type="password"  value={userData.password}  />
                         </div>
 
-                        <button onClick={handleSubmit} className='bg-blue-500 rounded p-4 text-white font-semibold text-xl hover:bg-blue-600 hover:rounded-4xl transition-all duration-400'>Sign in</button>
+                        <button onClick={handleSubmit} className='bg-custom-radial hover:bg-blue-500  border-2 border-blue-600  w-full rounded py-3 text-white font-semibold text-xl hover:rounded-4xl transition-all duration-500'>Sign in</button>
 
-                        <button onClick={handleNumber} className='text-blue-900 font-semibold hover:text-blue-700'>Sign in with {!loginWithNumber ? 'Number' : 'Email'}</button>
+                        {/* <button onClick={handleNumber} className='text-blue-900 font-semibold hover:text-blue-700'>Sign in with {!loginWithNumber ? 'Number' : 'Email'}</button> */}
                         <div className='flex items-center gap-1'>
-                        <div className='h-[1px] w-[50%] text-black bg-black'></div> Or <div className='h-[1px] w-[50%] text-black bg-black'></div>
+                        <div className='h-[1px] w-[50%] text-white bg-white'></div> <span className='text-white mx-2'>Or</span> <div className='h-[1px] w-[50%] text-white bg-white'></div>
                         </div>
-                        <Link  to='/signup' className='text-center text-blue-950 font-bold'>Create a new account </Link>
+                        <p className=' text-white text-center'>DON'T HAVE AN ACCOUNT ?   <Link  to='/signup' className='text-center text-amber-600 font-bold hover:text-amber-800 transition-all duration-300  ml-4'>SIGN UP </Link></p>
                     </form>
                    </div>
                    <div className='hidden md:w-2/6 lg:w-3/6'></div>

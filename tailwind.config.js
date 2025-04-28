@@ -7,6 +7,9 @@ export default {
       fontFamily: {
         ruthie: ['Ruthie', 'sans-serif'],
         ruluko: ['Ruluko', 'sans-serif'],
+        backgroundImage: {
+          'custom-radial': 'radial-gradient(circle, #3EA2FF 0%, #000000 100%)',
+        }
       },
     },
   },

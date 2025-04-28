@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="border-t border-gray-700">
+    <div id='footer' className="border-t border-gray-700">
     <footer className="text-white px-6 md:px-20 py-10">
       <div className="flex flex-col md:flex-row justify-between gap-10 border-b border-gray-700 pb-8">
         {/* Brand */}

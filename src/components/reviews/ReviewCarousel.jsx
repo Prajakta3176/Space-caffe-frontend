@@ -40,7 +40,7 @@ const reviews = [
 
 export default function ReviewCarousel() {
   return (
-    <div className="w-full px-4 py-10">
+    <div id='testimonials' className="w-full px-4 py-10">
         <h1 className='text-white reviewHead max-w-[90%] sm:max-w-[70%] md:max-w-[40%] mx-auto text-4xl text-center mb-10 font-semibold'>Here’s what people say about Space Cafe</h1>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
