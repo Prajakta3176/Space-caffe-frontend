@@ -32,7 +32,7 @@ export default function SignIn() {
         e.preventDefault();
         const fetch = async()=>{
             try{
-            const res = await axios.post('http://localhost:8080/signin',userData);
+            const res = await axios.post('http://localhost:8080/api/user/signin',userData);
             navigate('/');
             console.log(res.data);
             dispatch(authActions.login());

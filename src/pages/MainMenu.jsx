@@ -8,7 +8,7 @@ export default function MainMenu() {
     useEffect(()=>{
 
         const fetch = async()=>{
-                const res = await axios.get('http://localhost:8080/get-all-food-items');
+                const res = await axios.get('http://localhost:8080/api/food/get-all-food-items');
                 console.log(res.data.data);
                 setMenuData(res.data.data);
         }
