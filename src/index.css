@@ -16,3 +16,14 @@
 .reviewHead{
     font-family:  "Ruluko";
 }
+
+
+.mainBody {
+    margin: 0;
+    /* background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%); */
+    overflow-x: hidden;
+    color: white;
+  }
+  
+
+  

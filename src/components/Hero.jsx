@@ -13,8 +13,8 @@ export default function Hero() {
 
        </div>
        <div className='w-full md:w-3/6'>
-       <img className='w-[70%]' src={think} alt="" />
-       <img src={hero} alt="" />
+       <img className='w-[70%] animate-bounce' src={think} alt="" />
+       <img className='' src={hero} alt="" />
        </div>
     </div>
   )

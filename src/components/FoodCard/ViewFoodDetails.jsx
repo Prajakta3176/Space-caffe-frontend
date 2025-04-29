@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import ReviewSection from '../review/ReviewSection';
 
 export default function ViewFoodDetails() {
   const { foodid } = useParams();
@@ -39,7 +40,7 @@ export default function ViewFoodDetails() {
 
   const handleCart = async()=>{
     try{
-      const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/food/add-food-in-cart`,{},{headers});
+      const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/cart/add-food-in-cart`,{},{headers});
       console.log(res.data);
       alert(res.data.message)
     }catch(err){
@@ -48,7 +49,7 @@ export default function ViewFoodDetails() {
   }
 
   return (
-    <div className="w-full min-h-screen  bg-cover bg-center flex items-center justify-center px-4 py-10">
+    <div className="w-full min-h-screen  bg-cover bg-center flex flex-col items-center justify-center px-4 py-10">
       <div className="relative rounded-2xl p-6 md:p-10 w-full max-w-5xl flex flex-col md:flex-row gap-6">
         
         {/* Glass background */}
@@ -56,11 +57,11 @@ export default function ViewFoodDetails() {
 
         {/* Actual content */}
         <div className="relative z-10 text-white w-[100%] md:w-[50%]">
-          <div className="bg-white p-2 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 w-[100%]">
+          <div className=" p-2 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 w-full flex items-center justify-center">
             <img
               src={foodData.image}
               alt={foodData.name}
-              className="w-[200px] h-[200px] rounded-xl object-cover"
+              className="rounded-xl object-cover"
             />
           </div>
         </div>
@@ -75,7 +76,7 @@ export default function ViewFoodDetails() {
             {Array.from({ length: 5 }, (_, i) => (
               <span key={i}>{i < foodData.averageRating ? '★' : '☆'}</span>
             ))}
-            <span className="ml-2 text-white">{foodData.averageRating}</span>
+            <span className="ml-2 text-white">{parseFloat(foodData.averageRating).toFixed(1)}</span>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
@@ -84,7 +85,13 @@ export default function ViewFoodDetails() {
             </button>
 
           </div>
+         
         </div>
+        
+      </div>
+      <div className='w-full'>
+      <ReviewSection foodData={foodData} foodid={foodid}/>
+
       </div>
     </div>
   );

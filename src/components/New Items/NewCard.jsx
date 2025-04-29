@@ -25,7 +25,7 @@ export default function NewCard({ newData, direction , textAlign, imgPosition })
       <h1 className="text-white text-2xl font-bold">{newData.heading}</h1>
       <p className="text-white font-light mt-2">{newData.desc}</p>
       <p className="text-white bg-blue-950 py-1 px-4 rounded-3xl font-light text-sm my-3">₹ {newData.price}/-</p>
-      <img src={newData.image} alt="burger" className="w-2/3 mx-auto" />
+      <img  src={newData.image} alt="burger" className="w-2/3 mx-auto animate-pulse" />
     </div>
 
     </>

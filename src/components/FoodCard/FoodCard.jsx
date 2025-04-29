@@ -13,7 +13,7 @@ export default function FoodCard({foodData}) {
 
             {/* Actual content */}
             <div className="relative z-10 flex flex-col items-center w-full h-full">
-            <div className='bg-white hover:scale-105 transition-all duration-500 ease-in-out relative top-[-50px] rounded-full flex items-center justify-center h-[90px] w-[90px]'>
+            <div className='bg-white hover:scale-105 transition-all duration-500 ease-in-out relative top-[-50px] rounded-full flex items-center justify-center h-[90px] w-[90px] overflow-hidden'>
                 <img className='h-[90px] w-[90px] flex items-center justify-center' src={menuPizza} alt="image"/>
             </div>
             <h2 className='tracking-widest text-xl text-zinc-200 font-semibold text-center'>{name}</h2>
@@ -22,7 +22,7 @@ export default function FoodCard({foodData}) {
                 <p className='mt-2 text-zinc-200 font-semibold'>&#8377; {price}</p>
                 <div className="flex items-center gap-1 text-amber-400 text-xl">
                 <span className='text-2xl'>★</span>
-                <span className='text-white'> {averageRating}</span>
+                <span className='text-white'> {parseFloat(averageRating).toFixed(1)}</span>
                 </div>
             </div>
             </div>

@@ -7,10 +7,14 @@ export default {
       fontFamily: {
         ruthie: ['Ruthie', 'sans-serif'],
         ruluko: ['Ruluko', 'sans-serif'],
-        backgroundImage: {
-          'custom-radial': 'radial-gradient(circle, #3EA2FF 0%, #000000 100%)',
-        }
+        
       },
+      backgroundImage: {
+        'custom-radial': 'radial-gradient(circle, #3EA2FF 0%, #000000 100%)',
+      },
+      animation: {
+        spinSlow: 'spin 10s linear infinite',
+      }
     },
   },
   plugins: [],

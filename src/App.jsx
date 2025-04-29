@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-        <div className='mainBody h-[100vh] bg-black overflow-x-hidden'>
+        <div className='mainBody starry-bg h-[100vh] bg-black overflow-x-hidden'>
             <Navbar/>
 
             <div className='mt-10'>
