@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../store/auth';
 import SketchfabModel from '../animation/SketchfabModel';
@@ -37,12 +37,13 @@ export default function SignIn() {
         const fetch = async()=>{
             try{
             const res = await axios.post('https://space-caffe-backend.vercel.app/api/user/signin',userData);
-            navigate('/');
+            
             console.log(res.data);
             dispatch(authActions.login());
             localStorage.setItem("id" , res?.data?.id);
             localStorage.setItem("token" , res?.data?.token);
             alert("Signed In successfully");
+            navigate('/home');
 
 
             }catch(err){

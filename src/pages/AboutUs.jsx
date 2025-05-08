@@ -2,7 +2,8 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-[#0a0f1c] text-white px-6 py-12">
+    // from-black to-[#0a0f1c]
+    <div className="min-h-screen bg-gradient-to-b text-white px-6 py-12">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-orange-500">About Caffe Cosmos</h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8">
