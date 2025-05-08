@@ -50,7 +50,7 @@ export default function ShortMenu() {
 
   return (
     <div id='menu' className='flex flex-col gap-10 w-full items-center px-10'>
-        <h1 className=' text-3xl md:text-4xl text-amber-500 font-bold text-center'>What Are You Craving Today?</h1>
+        <h1 className='reviewHead text-3xl md:text-4xl text-amber-500 font-bold text-center'>What Are You Craving Today?</h1>
         {/* <MenuBar menuData={menuData}/> */}
         <div className='flex flex-wrap gap-10 justify-center px-5 my-10'>
         {

@@ -20,8 +20,8 @@
 
 .mainBody {
     margin: 0;
-    background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
-
+    /* background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%); */
+    background: linear-gradient(to bottom right, black, #0a0f1c);
     overflow-x: hidden;
     color: white;
   }

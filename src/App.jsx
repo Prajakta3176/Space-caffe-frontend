@@ -13,6 +13,7 @@ import ViewFoodDetails from './components/FoodCard/ViewFoodDetails';
 import Cart from './pages/Cart.jsx'
 import OrderHistory from './pages/OrderHistory.jsx';
 import Profile from './pages/Profile.jsx';
+import AboutUs from './pages/AboutUs.jsx';
 
 
 
@@ -43,6 +44,7 @@ export default function App() {
                 <Route path='/cart' element={<Cart/>} />
                 <Route path='/order-history' element={<OrderHistory/>} />
                 <Route path='/profile' element={<Profile/>} />
+                <Route path='/about-us' element={<AboutUs/>} />
                 
             </Routes>
 
