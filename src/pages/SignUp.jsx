@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router';
+import homePageAnimation from '../animation/homePageAnimation2.json';
+import Lottie from "lottie-react";
 
 export default function SignUp() {
 
@@ -52,36 +54,41 @@ export default function SignUp() {
 
 
   return (
-    <div className=' h-screen w-full flex items-center justify-center'>
-        <div className='w-[80%] h-auto p-8 rounded'>
-                   <div className='w-full md:w-4/6 lg:w-3/6 flex flex-col gap-3'>
-                    <h1 className='font-bold text-blue-400 text-3xl lg:text-4xl'>Sign up</h1>
+    <div className=' min-h-screen w-full flex items-center justify-center'>
+        <div className='w-full md:w-[80%] h-auto p-8 rounded flex lg:flex-row flex-col-reverse gap-5'>
+                <div className='lg:w-3/6 w-full lg:flex items-start justify-start flex-grow '>
+                         <Lottie id='homeAnimate' animationData={homePageAnimation} loop={true} style={{width:'100%'}} />
+                   </div>
+
+                   <div className='w-full lg:w-3/6 flex flex-col gap-7'>
+                   <h1 className='font-md text-3xl lg:text-4xl font-bold text-blue-500 tracking-widest text-center '> SIGN UP      </h1>
                     <form action="" className='flex flex-col gap-6 w-full'>
-                        <div className='flex flex-col w-full'>
-                        {/* <label htmlFor="name">Name</label> */}
-                        <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='name' name='fullname' type="text" placeholder='Name' value={userData.fullname} />
+                        <div className='flex flex-col w-full gap-1'>
+                        <label htmlFor="name">Name</label>
+                        <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='name' name='fullname' type="text" placeholder='Enter your fullname' value={userData.fullname} />
                         </div>
 
-                        <div className='flex flex-col w-full'>
-                        {/* <label htmlFor="email">Email</label> */}
-                        <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='email' name='email' type="email" placeholder='Email' value={userData.email}  />
+                        <div className='flex flex-col w-full gap-1'>
+                        <label htmlFor="email">Email</label>
+                        <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='email' name='email' type="email" placeholder='Enter email' value={userData.email}  />
                         </div>
 
-                        <div className='flex flex-col w-full'>
-                        {/* <label htmlFor="number">Number</label> */}
-                        <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='number' name='number' type="number" placeholder='Number' value={userData.number}  />
+                        <div className='flex flex-col w-full gap-1'>
+                        <label htmlFor="number">Number</label>
+                        <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='number' name='number' type="number" placeholder='Enter number' value={userData.number}  />
                         </div>
                         
-                        <div className='flex flex-col w-full'>
-                            {/* <label htmlFor="password">Password</label> */}
-                            <input onChange={handleChange} className={`bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl ${inCorrectPass ? "border-2 border-red-600" : ""}`} id='password' name='password' type="password" placeholder='Password' value={userData.password}  />
+                        <div className='flex flex-col w-full gap-1'>
+                            <label htmlFor="password">Password</label>
+                            <input onChange={handleChange} className={`bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl ${inCorrectPass ? "border-2 border-red-600" : ""}`} id='password' name='password' type="password" placeholder='Enter strong password' value={userData.password}  />
                         </div>
 
                         <button onClick={handleSubmit} className='border border-blue-500 rounded py-3 text-white font-semibold text-xl hover:bg-blue-900 hover:rounded-4xl transition-all duration-400'>Sign up</button>
                         <p className='text-center font-semibold text-white'>Already have an account ? <Link to='/signin' className='text-amber-600 hover:underline transition-all duration-300'>Sign in</Link></p>
                     </form>
                    </div>
-                   <div className='hidden md:w-2/6 lg:w-3/6'></div>
+                 
+                   
         </div>
     </div>
   )

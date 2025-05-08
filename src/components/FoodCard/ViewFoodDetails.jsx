@@ -56,12 +56,12 @@ export default function ViewFoodDetails() {
         <div className="absolute inset-0 bg-[#0b0f2f] opacity-60 backdrop-blur-sm rounded-2xl z-0"></div>
 
         {/* Actual content */}
-        <div className="relative z-10 text-white w-[100%] md:w-[50%]">
+        <div className="relative z-10 text-white w-[100%] md:w-[50%] ">
           <div className=" p-2 rounded-xl shadow-xl hover:scale-105 transition-all duration-300 w-full flex items-center justify-center">
             <img
               src={foodData.image}
               alt={foodData.name}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover w-full max-h-[400px]"
             />
           </div>
         </div>

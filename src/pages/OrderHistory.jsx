@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router';
+import Lottie from "lottie-react";
+
+import emptyCartAnimation from '../animation/emptyCartAnimation.json';
+
 
 export default function OrderHistory() {
   const [orders, setOrders] = useState();
@@ -26,7 +30,9 @@ export default function OrderHistory() {
         🛰️ Your Order History
       </h1>
 
-      <div className="space-y-8 max-w-4xl mx-auto relative z-10">
+      {
+        orders && orders.length > 0 ? (
+          <div className="space-y-8 max-w-4xl mx-auto relative z-10">
       {orders?.map((order, index) => (
   <div
     key={index}
@@ -78,6 +84,14 @@ export default function OrderHistory() {
 ))}
 
       </div>
+        ) : (
+          <div className="flex flex-col min-h-screen items-center justify-center mt-10">
+              <Lottie animationData={emptyCartAnimation} loop={true} style={{ height: 250 }} />
+              <h3 className="text-2xl text-zinc-400">You haven't ordered anything yet !</h3>
+              {/* <p className="text-zinc-500">Add some delicious items to fuel your space journey!</p> */}
+          </div>
+          )
+      }
     </div>
   )
 }

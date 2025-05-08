@@ -65,8 +65,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Useful Links */}
-        <div>
+       <div className='flex gap-3 sm:gap-10 justify-between'>
+         {/* Useful Links */}
+         <div>
           <h3 className="text-lg font-semibold mb-2">Useful links</h3>
           <ul className="text-sm space-y-1 text-gray-300">
             <li><a href="#" className="hover:text-yellow-400 transition-all duration-300">About us</a></li>
@@ -96,6 +97,7 @@ const Footer = () => {
             <li><a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-all duration-300">Social media</a></li>
           </ul>
         </div>
+       </div>
       </div>
 
       {/* Copyright */}

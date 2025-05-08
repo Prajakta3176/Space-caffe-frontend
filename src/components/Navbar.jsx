@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className='text-2xl font-bold'>Logo</div>
         
         <nav className={`${isMobile ? "hidden" : "flex"}  items-center gap-10 text-xl scroll-smooth`}>
-            <a href='/' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Home</a>
+            <a href='/home' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Home</a>
             <a href='/main-menu' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Menu</a>
             {/* <a href='#footer' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Contact</a> */}
             <a href='/about-us' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>About us</a>
@@ -97,7 +97,7 @@ export default function Navbar() {
             <IoClose />
           </button>
 
-          <a href='/' onClick={handleMenu} className='hover:text-amber-500'>Home</a>
+          <a href='/home' onClick={handleMenu} className='hover:text-amber-500'>Home</a>
           <a href='/main-menu' onClick={handleMenu} className='hover:text-amber-500'>Menu</a>
           {/* <a href='#footer' onClick={handleMenu} className='hover:text-amber-500'>Contact</a> */}
           <a href='/about-us' onClick={handleMenu} className='hover:text-amber-500'>About us</a>

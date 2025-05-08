@@ -48,11 +48,11 @@ const ReviewSection = ({ foodData, foodid }) => {
   };
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 w-full md:max-w-[70%] mx-auto ">
       <h3 className="text-xl font-semibold text-white mb-2">Reviews</h3>
       {allReviews?.reviews && allReviews?.reviews?.length > 0 ? (
         allReviews?.reviews.map((review, index) => (
-          <div key={index} className="bg-white/10 text-white p-4 rounded-lg mb-2">
+          <div key={index} className="bg-white/10 text-white  py-4 px-6 rounded-lg mb-2">
             <div className='flex items-center justify-start'>
                 <img src={avatar} alt="avatar" className="w-7 rounded-full" />
                 <p className='text-sm font-light italic text-blue-800'>{review.user.email}</p>

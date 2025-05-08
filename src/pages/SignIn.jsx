@@ -3,6 +3,10 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../store/auth';
+import SketchfabModel from '../animation/SketchfabModel';
+import homePageAnimation from '../animation/homePageAnimation2.json';
+import Lottie from "lottie-react";
+
 
 
 export default function SignIn() {
@@ -63,32 +67,34 @@ export default function SignIn() {
 
 
   return (
-    <div className=' h-screen w-full flex items-center justify-center'>
-        <div className='w-[80%] h-auto p-8 rounded'>
-                   <div className='w-full md:w-4/6 lg:w-3/6 flex flex-col gap-3'>
-                    <h1 className='font-sm text-white text-xl lg:text-2xl  tracking-widest text-center '>Hey,Enter your details to get sign in
-                    into your account  </h1>
+    <div className=' min-h-screen w-full flex items-center justify-center pt-10'>
+            
+
+  <div className='w-full md:w-[80%] h-auto p-8 rounded z-10 flex flex-col lg:flex-row gap-5'>
+                   <div className='w-full  lg:w-3/6 flex flex-col gap-8'>
+                   <h1 className='font-md text-3xl lg:text-4xl font-bold text-blue-500 tracking-widest text-center '> SIGN IN    </h1>
+                   
                     <form action="" className='flex flex-col gap-6 w-full items-center'>                       
 
                         {
                             loginWithNumber ? 
-                            (<div className='flex flex-col w-full'>
+                            (<div className='flex flex-col w-full gap-1'>
                                 <label className='text-white' htmlFor="number">Number</label>
                                 <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='number' name='number' type="number"  value={userData.number}  />
                                 </div>
                             ) : (
-                                <div className='flex flex-col w-full'>
+                                <div className='flex flex-col w-full gap-1'>
                                 <label className='text-white' htmlFor="email">Email</label>
-                                <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='email' name='email' type="email"  value={userData.email}  />
+                                <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='email' name='email' type="email" placeholder='Enter registered email'  value={userData.email}  />
                                 </div>
                             )
 
                         }
                                                
                         
-                        <div className='flex flex-col w-full'>
+                        <div className='flex flex-col w-full gap-1'>
                             <label className='text-white' htmlFor="password">Password</label>
-                            <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='password' name='password' type="password"  value={userData.password}  />
+                            <input onChange={handleChange} className='bg-white/10 backdrop-blur-md text-white placeholder-white/70 focus:outline-none p-4 rounded-2xl' id='password' name='password' type="password" placeholder='Enter password'  value={userData.password}  />
                         </div>
 
                         <button onClick={handleSubmit} className='bg-custom-radial hover:bg-blue-500  border-2 border-blue-600  w-full rounded py-3 text-white font-semibold text-xl hover:rounded-4xl transition-all duration-500'>Sign in</button>
@@ -97,10 +103,13 @@ export default function SignIn() {
                         <div className='flex items-center gap-1'>
                         <div className='h-[1px] w-[50%] text-white bg-white'></div> <span className='text-white mx-2'>Or</span> <div className='h-[1px] w-[50%] text-white bg-white'></div>
                         </div>
-                        <p className=' text-white text-center'>DON'T HAVE AN ACCOUNT ?   <Link  to='/signup' className='text-center text-amber-600 font-bold hover:text-amber-800 transition-all duration-300  ml-4'>SIGN UP </Link></p>
+                        <p className=' text-white text-center'>DON'T HAVE AN ACCOUNT ?   <Link  to='/signup' className='text-center text-amber-600 font-bold hover:text-amber-800 transition-all duration-300  ml-4'>Sign Up</Link></p>
                     </form>
                    </div>
-                   <div className='hidden md:w-2/6 lg:w-3/6'></div>
+                   {/*hidden md:w-2/6 lg:w-3/6 */}
+                   <div className='lg:w-3/6 w-full lg:flex items-start justify-start flex-grow '>
+                         <Lottie id='homeAnimate' animationData={homePageAnimation} loop={true} style={{width:'100%'}} />
+                   </div>
         </div>
     </div>
   )

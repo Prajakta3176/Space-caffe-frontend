@@ -14,7 +14,7 @@ export default function NewCard({ newData, direction , textAlign, imgPosition })
         </div>
       </div>
       <div className={`w-4/6 flex ${imgPosition}`}>
-        <img className='max-w-[60%]' src={newData.image} alt="burger" />
+        <img className='max-w-[50%]' src={newData.image} alt="burger" />
       </div>
     </div>    
 

@@ -29,13 +29,14 @@ export default function App() {
 
   return (
     <>
-        <div className='mainBody starry-bg h-[100vh] bg-black overflow-x-hidden'>
+        <div className='mainBody starry-bg min-h-screen bg-black overflow-x-hidden flex flex-col'>
             <Navbar/>
 
-            <div className='mt-10'>
+            <div className='mt-10 flex-grow'>
             <Routes>
-                <Route exact path='/' element={<Home/>} />
+                <Route exact path='/home' element={<Home/>} />
                 <Route path='/signin' element={<SignIn/>} />
+                <Route path='/' element={<SignIn/>} />
                 <Route path='/signup' element={<SignUp/>} />
                 <Route path='/main-menu' element={<MainMenu/>} />
                 <Route path='/food-details/:foodid' element={<ViewFoodDetails/>} />
