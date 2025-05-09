@@ -19,6 +19,8 @@ import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 
 export default function App() {
+      const isLoggedIn = useSelector((state => state.auth.isLoggedIn));
+  
 
   const dispatch = useDispatch();
   useEffect(()=>{
@@ -36,9 +38,10 @@ export default function App() {
 
             <div className='mt-10 flex-grow'>
             <Routes>
+                <Route path='/' element={isLoggedIn ? <Home/> : <SignIn/>} />
                 <Route exact path='/home' element={<Home/>} />
                 <Route path='/signin' element={<SignIn/>} />
-                <Route path='/' element={<SignIn/>} />
+                
                 <Route path='/signup' element={<SignUp/>} />
                 <Route path='/main-menu' element={<MainMenu/>} />
                 <Route path='/food-details/:foodid' element={<ViewFoodDetails/>} />
