@@ -38,6 +38,7 @@ export default function Navbar() {
   const handleSignOut = ()=>{
     alert("You have been signed out")
     dispatch(authActions.logout())
+    localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('id');
     localStorage.removeItem('token');
   }

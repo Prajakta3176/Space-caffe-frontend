@@ -42,7 +42,8 @@ export default function SignIn() {
             dispatch(authActions.login());
             localStorage.setItem("id" , res?.data?.id);
             localStorage.setItem("token" , res?.data?.token);
-            alert("Signed In successfully");
+            localStorage.setItem('isLoggedIn', 'true');
+            alert("Signed In successfully");   
             navigate('/home');
 
 
