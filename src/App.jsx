@@ -14,6 +14,7 @@ import Cart from './pages/Cart.jsx'
 import OrderHistory from './pages/OrderHistory.jsx';
 import Profile from './pages/Profile.jsx';
 import AboutUs from './pages/AboutUs.jsx';
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 
 
@@ -37,13 +38,13 @@ export default function App() {
             <Routes>
                 <Route exact path='/home' element={<Home/>} />
                 <Route path='/signin' element={<SignIn/>} />
-                <Route path='/' element={<SignIn/>} />
+                <Route path='/' element={<Home/>} />
                 <Route path='/signup' element={<SignUp/>} />
                 <Route path='/main-menu' element={<MainMenu/>} />
                 <Route path='/food-details/:foodid' element={<ViewFoodDetails/>} />
-                <Route path='/cart' element={<Cart/>} />
-                <Route path='/order-history' element={<OrderHistory/>} />
-                <Route path='/profile' element={<Profile/>} />
+                <Route path='/cart' element={<ProtectedRoute><Cart/></ProtectedRoute>} />
+                <Route path='/order-history' element={<ProtectedRoute><OrderHistory/></ProtectedRoute>} />
+                <Route path='/profile' element={<ProtectedRoute><Profile/></ProtectedRoute>} />
                 <Route path='/about-us' element={<AboutUs/>} />
                 
             </Routes>

@@ -78,7 +78,7 @@ export default function OrderHistory() {
     </div>
 
     <div className="text-right pt-2">
-      <span className="text-sm font-bold text-green-400">Status: {order.status}</span>
+      <span className={`text-sm font-bold ${order?.status === "Cancelled" ?  "text-red-500" : order?.status==="Out for Delivery" ? "text-yellow-400" : order?.status=== "Delivered" ? 'text-blue-400' : "text-green-400"}`}>Status: {order.status}</span>
     </div>
   </div>
 ))}
