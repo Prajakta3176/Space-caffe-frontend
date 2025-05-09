@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaUserAstronaut } from "react-icons/fa";
 import { FaCartFlatbedSuitcase } from "react-icons/fa6";
 import { useDispatch, useSelector } from 'react-redux';
@@ -46,7 +46,10 @@ export default function Navbar() {
   return (
     <>
     <div className={`h-[70px] w-full text-white fixed flex items-center ${isMobile ? "justify-between px-10" : "justify-around"}  py-4 px-1 z-40 p-10`}>
-        <div className='text-2xl font-bold'>Logo</div>
+        <Link to='/home' className='w-[200px] gap-2 flex'>
+          {/* <img className='w-[50px] h-[50px]' src="/favicon3.png" alt="" /> */}
+          <img className='w-[140px]' src="/logo2.png" alt="" />
+        </Link>
         
         <nav className={`${isMobile ? "hidden" : "flex"}  items-center gap-10 text-xl scroll-smooth`}>
             <a href='/home' className={`hover:text-amber-500 hover:border-b-2 hover:border-amber-500 hover:pb-1 transition-all duration-300`}>Home</a>

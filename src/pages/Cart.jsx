@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router';
 export default function Cart() {
 
     const [foodData, setFoodData] = useState([]);
+    const [userData, setUserData] = useState();
     const [orderPopup, setOrderPopup] = useState(false);
     const navigate = useNavigate();
 
@@ -19,7 +20,10 @@ export default function Cart() {
 
       const fetch = async()=>{
         const res = await axios.get(`https://space-caffe-backend.vercel.app/api/cart/get-all-cart-items/`,{headers});
-        setFoodData(res.data);
+        const result = await axios.get(`https://space-caffe-backend.vercel.app/api/user/get-user-information`, { headers });
+        console.log(result.data);
+        setUserData(result?.data);
+        setFoodData(res?.data);
     }
 
     useEffect(()=>{     
@@ -78,6 +82,11 @@ export default function Cart() {
 
     const handlePlaceOrder = async()=>{
         try{
+            if(!userData?.address){
+                alert("Please set your address before placing an order");
+                navigate('/profile');
+                return ;
+            }
             const res = await axios.patch(`https://space-caffe-backend.vercel.app/api/order/place-order`,{},{headers});
             console.log(res.data);
             fetch();

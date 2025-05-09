@@ -57,7 +57,7 @@ export default function Profile() {
                     </div>
 
                     <div>
-                    <label className="block text-zinc-300">Address</label>
+                    <label className="block text-zinc-300">Address <span className='text-red-400'>(Set address before ordering)</span></label>
                     <textarea onChange={(e)=>{
                         setAddress((prev)=>({
                             ...prev, address : e.target.value

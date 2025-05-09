@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import ReviewSection from '../review/ReviewSection';
+import Loader2 from '../loaders/Loader2';
 
 export default function ViewFoodDetails() {
   const { foodid } = useParams();
@@ -27,7 +28,7 @@ export default function ViewFoodDetails() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-[80vh] text-white text-xl">
-        Loading...
+        <Loader2/>
       </div>
     );
   }

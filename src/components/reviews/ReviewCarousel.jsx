@@ -11,13 +11,13 @@ const reviews = [
     name: 'Rushabh Nandanwar',
     rating: 5,
     review:
-      "Walking into Space Café honestly felt like stepping into a sci-fi dream. The lights, the decor, the music – everything just synced with my mood instantly. I tried their cosmic burger and it was insanely good – juicy, loaded, and totally worth the hype. The vibes here are unmatched, and it's officially my favorite place to escape from college chaos.",
+      "Walking into Cafe Cosmos honestly felt like stepping into a sci-fi dream. The lights, the decor, the music – everything just synced with my mood instantly. I tried their cosmic burger and it was insanely good – juicy, loaded, and totally worth the hype. The vibes here are unmatched, and it's officially my favorite place to escape from college chaos.",
   },
   {
     name: 'Prajakta Mondhe',
     rating: 5,
     review:
-      "Space Café is literally a hidden gem in the city. I loved how aesthetically everything is set – from the ambient lighting to the galaxy-themed walls. I ordered their iced mocha and fries and legit felt like I was in another universe. Plus, the staff is super sweet and welcoming. This café isn't just a food spot, it’s an experience.",
+      "Cafe Cosmos is literally a hidden gem in the city. I loved how aesthetically everything is set – from the ambient lighting to the galaxy-themed walls. I ordered their iced mocha and fries and legit felt like I was in another universe. Plus, the staff is super sweet and welcoming. This café isn't just a food spot, it’s an experience.",
   },
   {
     name: 'Nita Nandanwar',
@@ -29,7 +29,7 @@ const reviews = [
     name: 'Pooja Kumar',
     rating: 5,
     review:
-      "I wasn’t expecting much when I visited Space Café, but man, it blew my mind. Their cold coffee was so refreshing, and the burger was literally out of this world. The playlist playing in the background was a chef’s kiss! It felt like my brain just unplugged from stress. Will 100% return with my entire squad.",
+      "I wasn’t expecting much when I visited Cafe Cosmos, but man, it blew my mind. Their cold coffee was so refreshing, and the burger was literally out of this world. The playlist playing in the background was a chef’s kiss! It felt like my brain just unplugged from stress. Will 100% return with my entire squad.",
   },
   {
     name: 'Sarthak Sharma',
@@ -41,19 +41,19 @@ const reviews = [
     name: 'Neha Sinha',
     rating: 5,
     review:
-      "I couldn’t stop taking pictures the entire time I was at Space Café! Every corner is Instagram-worthy and the atmosphere is cozy yet super modern. The strawberry shake was thick, rich, and full of flavor. Also, the staff was very friendly and helpful in recommending what to try. It’s now my go-to place when I need creative inspiration!",
+      "I couldn’t stop taking pictures the entire time I was at Cafe Cosmos! Every corner is Instagram-worthy and the atmosphere is cozy yet super modern. The strawberry shake was thick, rich, and full of flavor. Also, the staff was very friendly and helpful in recommending what to try. It’s now my go-to place when I need creative inspiration!",
   },
   {
     name: 'Ravi Singh',
     rating: 4,
     review:
-      "Loved the chill vibe of Space Café! The space-themed interiors were amazing, especially the glowing tables and starry ceiling lights. I had their peri-peri fries and iced latte – both were fantastic. It’s a perfect escape spot for solo thinkers or for catching up with close friends without the noise of the city.",
+      "Loved the chill vibe of Cafe Cosmos! The space-themed interiors were amazing, especially the glowing tables and starry ceiling lights. I had their peri-peri fries and iced latte – both were fantastic. It’s a perfect escape spot for solo thinkers or for catching up with close friends without the noise of the city.",
   },
   {
     name: 'Ananya Patel',
     rating: 5,
     review:
-      "From the moment I walked in, I felt like I was floating through a galaxy. This place is peaceful, cozy, and has a beautiful futuristic vibe. I tried the Meteor Shake and it was honestly the best shake I’ve had in months. Space Café doesn’t just serve food – it serves mood, peace, and a whole vibe. Loved every second.",
+      "From the moment I walked in, I felt like I was floating through a galaxy. This place is peaceful, cozy, and has a beautiful futuristic vibe. I tried the Meteor Shake and it was honestly the best shake I’ve had in months. Cafe Cosmos doesn’t just serve food – it serves mood, peace, and a whole vibe. Loved every second.",
   },
 ];
 

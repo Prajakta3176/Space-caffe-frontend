@@ -23,8 +23,7 @@ const Footer = () => {
         {/* Brand */}
         <div className="md:w-1/4">
           <h2 className="text-xl font-bold mb-3">
-            <span className="bg-yellow-400 text-black rounded px-2 py-1 mr-2">F</span>
-            OODI
+            <img className='w-[140px]' src="/logo2.png" alt="" />
           </h2>
           <p className="text-sm text-gray-300">
             Savor the artistry where every dish is a culinary masterpiece

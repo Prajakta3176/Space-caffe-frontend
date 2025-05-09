@@ -5,8 +5,8 @@ import menuPizza from '../../assets/menuPizza.svg'
 export default function FoodCard({foodData}) {
     const {image,description,name,averageRating,price} = foodData;
   return (
-    <Link to={`/food-details/${foodData._id}`}>
-        <div className='relative rounded-2xl p-4 sm:w-[270px] sm:h-auto flex flex-col items-center h-auto w-[60vw]'>
+    <Link to={`/food-details/${foodData._id}`} >
+        <div className='relative rounded-2xl p-4 sm:w-[270px]   flex flex-col items-center h-[280px]  w-[60vw]'>
 
             {/* Background blur and opacity layer */}
             <div className="absolute inset-0 border border-white/50  backdrop-blur-md shadow-md space-y-6 rounded-2xl z-0"></div>
@@ -17,7 +17,7 @@ export default function FoodCard({foodData}) {
                 <img className='h-[90px] w-[90px] flex items-center justify-center' src={image} alt="image"/>
             </div>
             <h2 className='tracking-widest text-xl text-zinc-200 font-semibold text-center'>{name}</h2>
-            <p className='mt-4 text-sm text-center text-zinc-200'>{description.slice(0,90)}...</p>
+            <p className='mt-4 text-sm text-center text-zinc-200'>{description.slice(0,50)}...</p>
             <div className='flex mt-5 justify-between w-full'>
                 <p className='mt-2 text-zinc-200 font-semibold'>&#8377; {price}</p>
                 <div className="flex items-center gap-1 text-amber-400 text-xl">

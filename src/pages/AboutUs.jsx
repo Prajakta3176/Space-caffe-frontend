@@ -5,9 +5,9 @@ const AboutUs = () => {
     // from-black to-[#0a0f1c]
     <div className="min-h-screen bg-gradient-to-b text-white px-6 py-12">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-orange-500">About Caffe Cosmos</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-orange-500">About Cafe Cosmos</h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8">
-          Welcome to <span className="text-white font-semibold">Caffe Cosmos</span> – where the flavors are out of this world 🚀. Inspired by the wonders of space and the joy of tasty food, we’re here to take your taste buds on an intergalactic journey.
+          Welcome to <span className="text-white font-semibold">Cafe Cosmos</span> – where the flavors are out of this world 🚀. Inspired by the wonders of space and the joy of tasty food, we’re here to take your taste buds on an intergalactic journey.
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 text-left">
@@ -21,14 +21,14 @@ const AboutUs = () => {
           <div>
             <h2 className="text-2xl font-semibold text-orange-400 mb-2">👨‍🚀 Our Story</h2>
             <p className="text-gray-400">
-              Caffe Cosmos started as a small dream by foodies who were also stargazers. We blended the love for stars, planets, and space travel with the thrill of crafting mouth-watering meals – and that’s how Caffe Cosmos was born.
+              Cafe Cosmos started as a small dream by foodies who were also stargazers. We blended the love for stars, planets, and space travel with the thrill of crafting mouth-watering meals – and that’s how Cafe Cosmos was born.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-orange-400 mb-2">🪐 What Makes Us Different</h2>
             <p className="text-gray-400">
-              From our space-themed interiors to the creatively named dishes and cosmic vibes, everything at Caffe Cosmos is built to offer an experience you won’t forget. Our team is here to serve you warmth, creativity, and lots of tasty surprises!
+              From our space-themed interiors to the creatively named dishes and cosmic vibes, everything at Cafe Cosmos is built to offer an experience you won’t forget. Our team is here to serve you warmth, creativity, and lots of tasty surprises!
             </p>
           </div>
 
@@ -41,7 +41,7 @@ const AboutUs = () => {
         </div>
 
         <div className="mt-10">
-          <p className="text-gray-400 italic">“Your Hunger, Our Mission!” – Team Caffe Cosmos 🌠</p>
+          <p className="text-gray-400 italic">“Your Hunger, Our Mission!” – Team Cafe Cosmos 🌠</p>
         </div>
       </div>
     </div>
