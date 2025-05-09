@@ -38,7 +38,7 @@ export default function App() {
             <Routes>
                 <Route exact path='/home' element={<Home/>} />
                 <Route path='/signin' element={<SignIn/>} />
-                <Route path='/' element={<Home/>} />
+                <Route path='/' element={<SignIn/>} />
                 <Route path='/signup' element={<SignUp/>} />
                 <Route path='/main-menu' element={<MainMenu/>} />
                 <Route path='/food-details/:foodid' element={<ViewFoodDetails/>} />
